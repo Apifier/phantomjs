@@ -495,7 +495,7 @@ signals:
     void resourceError(const QVariant& errorData);
     void resourceTimeout(const QVariant& errorData);
     void urlChanged(const QString& url);
-    void navigationRequested(const QString& url, const QString& navigationType, bool navigationLocked, bool isMainFrame);
+    void navigationRequested(const QString &url, const QString &navigationType, bool navigationLocked, bool isMainFrame, const QString &postData);     
     void rawPageCreated(QObject* page);
     void closing(QObject* page);
     void repaintRequested(const int x, const int y, const int width, const int height);

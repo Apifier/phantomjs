@@ -189,7 +189,7 @@ protected:
         return m_userAgent;
     }
 
-    bool acceptNavigationRequest(QWebFrame* frame, const QNetworkRequest& request, QWebPage::NavigationType type)
+    bool acceptNavigationRequest(QWebFrame* frame, const QNetworkRequest& request, QWebPage::NavigationType type, const QString& postData)
     {
         bool isMainFrame = (frame == m_webPage->m_mainFrame);
 
@@ -220,7 +220,8 @@ protected:
             request.url().toEncoded(),       //< Requested URL
             navigationType,                  //< Navigation Type
             !isNavigationLocked,             //< Will navigate (not locked)?
-            isMainFrame);                    //< Is main frame?
+            isMainFrame,                     //< Is main frame?
+            postData );                      //< HTTP POST data
 
         return !isNavigationLocked;
     }

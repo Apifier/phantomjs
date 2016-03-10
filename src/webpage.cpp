@@ -215,13 +215,15 @@ protected:
             break;
         }
         bool isNavigationLocked = m_webPage->navigationLocked();
+        QString contentType = request.header(QNetworkRequest::ContentTypeHeader).toString();
 
         emit m_webPage->navigationRequested(
             request.url().toEncoded(),       //< Requested URL
             navigationType,                  //< Navigation Type
             !isNavigationLocked,             //< Will navigate (not locked)?
             isMainFrame,                     //< Is main frame?
-            postData );                      //< HTTP POST data
+            postData,                        //< HTTP POST data
+            contentType );                   //< Content-Type HTTP header
 
         return !isNavigationLocked;
     }

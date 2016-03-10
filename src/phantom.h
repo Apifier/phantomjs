@@ -178,6 +178,7 @@ public slots:
     // exit() will not exit in debug mode. debugExit() will always exit.
     void exit(int code = 0);
     void debugExit(int code = 0);
+    void forceExit(int code = 0);
 
     // URL utilities
 

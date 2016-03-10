@@ -452,6 +452,11 @@ void Phantom::debugExit(int code)
     doExit(code);
 }
 
+void Phantom::forceExit(int code)
+{
+    ::exit(code);
+}
+
 QString Phantom::resolveRelativeUrl(QString url, QString base)
 {
     QUrl u = QUrl::fromEncoded(url.toLatin1());

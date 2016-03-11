@@ -4,8 +4,8 @@
 	branch = phantomjs
 [submodule "qtwebkit"]
 	path = src/qt/qtwebkit
-	url = https://github.com/Vitallium/qtwebkit.git
-	branch = phantomjs
+	url = https://github.com/apifier/qtwebkit.git
+	branch = phantomjs-2.1-apifier
 [submodule "3rdparty-win"]
 	path = src/qt/3rdparty
 	url = https://github.com/Vitallium/phantomjs-3rdparty-win.git

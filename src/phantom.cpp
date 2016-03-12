@@ -262,6 +262,7 @@ QVariantMap Phantom::version() const
     result["major"] = PHANTOMJS_VERSION_MAJOR;
     result["minor"] = PHANTOMJS_VERSION_MINOR;
     result["patch"] = PHANTOMJS_VERSION_PATCH;
+    result["string"] = QVariant(PHANTOMJS_VERSION_STRING);
     return result;
 }
 

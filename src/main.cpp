@@ -41,6 +41,9 @@
 
 static int inner_main(int argc, char** argv)
 {
+    // needed by Apifier worker to run phantomjs using a specific non-root account
+    QApplication::setSetuidAllowed(true);
+
     QApplication app(argc, argv);
 
     app.setWindowIcon(QIcon(":/phantomjs-icon.png"));
